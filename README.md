@@ -64,6 +64,14 @@ DEVELOPED BY : D.Vishnu vardhan reddy
 REF NO : 212221230023
 ```
 ```python
+import gym
+desc=['SFFF','FFHF','FFFG','FFHH']
+env = gym.make('FrozenLake-v1', desc=desc)
+init_state = env.reset()
+goal_state = 11
+P = env.env.P
+
+
 def value_iteration(P, gamma=1.0, theta=1e-10):
     # Initialize the value function V as an array of zeros
     V = np.zeros(len(P), dtype=np.float64)
@@ -93,8 +101,11 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
 
 ## OUTPUT:
 
-![image](https://github.com/vishnudorigundla/rl-value-iteration/assets/94175324/4e2f3e65-b1cd-49d7-b0cf-835bc978f1fa)
-
+<img width="414" alt="Screenshot 2024-03-15 at 8 27 30 AM" src="https://github.com/vishnudorigundla/rl-value-iteration/assets/94175324/f77bf44c-f63e-4ce2-9855-26003a55d8a9">
+</br>
+<img width="565" alt="Screenshot 2024-03-15 at 8 27 43 AM" src="https://github.com/vishnudorigundla/rl-value-iteration/assets/94175324/cb6503b7-0c93-49ca-b25e-5daab924724c">
+</br>
+<img width="416" alt="Screenshot 2024-03-15 at 8 27 51 AM" src="https://github.com/vishnudorigundla/rl-value-iteration/assets/94175324/8d8237d1-1c7d-40cd-964c-beb4f91ec0ca">
 
 ## RESULT:
 Thus, a Python program is developed to find the optimal policy for the given MDP using the value iteration algorithm.
